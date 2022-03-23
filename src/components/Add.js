@@ -24,42 +24,42 @@ const Add = ({ onAdd }) => {
   };
 
   return (
-    <div class="col-md-6 mb-4">
+    <div className="col-md-6 mb-4">
       <h1>React Blog</h1>
 
       <form action="" className="add-form" onSubmit={onSubmit}>
         <div className="form-control">
-          <div class="mb-2">
+          <div className="mb-2">
             <select
-              class="form-select"
+              className="form-select"
               aria-label="User select"
               onChange={(e) => setName(e.target.value)}
             >
-              <option selected>Select the user</option>
+              <option>Select the user</option>
               <option value="Leanne Graham">1 - Leanne Graham</option>
               <option value="Ervin Howell">2 - Ervin Howell</option>
               <option value="Clementine Bauch">3 - Clementine Bauch</option>
             </select>
           </div>
-          <div class="mb-2">
-            <label for="postTitle" class="form-label">
+          <div className="mb-2">
+            <label for="postTitle" className="form-label">
               Post Title
             </label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="postTitle"
               aria-describedby="Help"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
           </div>
-          <div class="mb-3">
-            <label for="contentInput" class="form-label">
+          <div className="mb-3">
+            <label for="contentInput" className="form-label">
               Blog Post
             </label>
             <textarea
-              class="form-control"
+              className="form-control"
               id="contentInput"
               rows="3"
               value={text}

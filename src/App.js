@@ -46,8 +46,9 @@ export default function App() {
   const deletePost = (id) => {
     axios
       .delete(`${'https://jsonplaceholder.typicode.com/posts'}/1`)
-      .then(() => {
+      .then(function (response) {
         console.log("Post deleted")
+        console.log(response)
         setUsers(users.filter((user) => user.id !== id))
       })
   }
@@ -57,8 +58,8 @@ export default function App() {
         <div class="row">
           <Add onAdd={addPost}/>
           {users.length > 0 ? <Edit users={users} onDelete={deletePost}/> : 'No Users To Show'}
-          <button onClick={getPosts}>GET request</button>
         </div>
+        <button onClick={getPosts} className=" btn btn-primary">Get Data</button>
     </div>
   );
 }
