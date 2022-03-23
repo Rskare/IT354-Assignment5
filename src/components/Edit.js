@@ -4,8 +4,8 @@ import Post from './Post';
 const Edit = ({ users, onDelete }) => {
   return (
     <>
-      {users.map((user) => (
-        <Post user={user} onDelete={onDelete} />
+      {users.map((user, index) => (
+        <Post key={index} user={user} onDelete={onDelete} />
       ))}
     </>
   );

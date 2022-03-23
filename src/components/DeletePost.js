@@ -4,7 +4,7 @@ const DeletePost = ({ user, onDelete }) => {
   return (
     <button
       type="button"
-      class="float-end btn btn-secondary"
+      className="float-end btn btn-secondary"
       onClick={() => onDelete(user.id)}
     >
       Delete Post
