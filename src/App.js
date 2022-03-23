@@ -54,8 +54,8 @@ export default function App() {
   }
 
   return (
-    <div class="container">
-        <div class="row">
+    <div className="container">
+        <div className="row">
           <Add onAdd={addPost}/>
           {users.length > 0 ? <Edit users={users} onDelete={deletePost}/> : 'No Users To Show'}
         </div>
